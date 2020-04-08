@@ -19,11 +19,12 @@ steps:
     testResultsFiles: '**/TEST-*.xml'
     tasks: 'assembleDebug'
 
-- task: CopyFilesOverSSH@0
-  inputs:
-    sshEndpoint: 'ss'
-    sourceFolder: '$(build.artifactStagingDirectory)'
-    contents: '**'
-    targetFolder: 'C:\Users\heman_1dmcdfa\Desktop\SSH'
-    readyTimeout: '20000'
 
+
+- task: WindowsMachineFileCopy@2
+  inputs:
+    SourcePath: '$(build.artifactStagingDirectory)'
+    MachineNames: '192.168.94.41'
+    AdminUserName: 'hemanthrpi3@gmail.com'
+    AdminPassword: 'Bhimavaram@1994'
+    TargetPath: 'C:\Users\heman_1dmcdfa\Desktop\SSH'
