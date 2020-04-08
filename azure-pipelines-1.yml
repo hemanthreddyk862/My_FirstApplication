@@ -20,6 +20,13 @@ steps:
     tasks: 'assembleDebug'
 - task: CopyFiles@2
   inputs:
+- task: CopyFilesOverSSH@0
+  inputs:
+    sshEndpoint: 'ss'
+    sourceFolder: '$(build.artifactStagingDirectory)'
+    contents: '**'
+    targetFolder: 'C:\Users\heman_1dmcdfa\Desktop\SSH'
+    readyTimeout: '20000'
     contents: '**/*.apk'
     targetFolder: '$(build.artifactStagingDirectory)'
-- task: PublishBuildArtifacts@1
+
