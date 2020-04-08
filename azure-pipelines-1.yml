@@ -21,11 +21,5 @@ steps:
 - task: CopyFiles@2
   inputs:
     contents: '**/*.apk'
-    targetFolder: - task: CopyFilesOverSSH@0
-  inputs:
-    sshEndpoint: 'ss'
-    sourceFolder: '$(build.artifactStagingDirectory)'
-    contents: '**'
-    targetFolder: 'C:\Users\heman_1dmcdfa\Desktop\SSH'
-    readyTimeout: '20000'
+    targetFolder: '$(build.artifactStagingDirectory)'
 - task: PublishBuildArtifacts@1
