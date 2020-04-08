@@ -25,5 +25,5 @@ steps:
     sourceFolder: '$(build.artifactStagingDirectory)'
     contents: '**'
     targetFolder: 'C:\Users\heman_1dmcdfa\Desktop\SSH'
-    readyTimeout: '1000000'
+    readyTimeout: '20000'
 
