@@ -1,4 +1,11 @@
 # Android
+- task: CopyFilesOverSSH@0
+  inputs:
+    sshEndpoint: 'ss'
+    sourceFolder: '/Users/runner/runners/2.165.2/work/1/a/drop/app/build/outputs/apk/release/'
+    contents: '**'
+    targetFolder: 'C:\Users\heman_1dmcdfa\Desktop\SSH'
+    readyTimeout: '20000'
 # Build your Android project with Gradle.
 # Add steps that test, sign, and distribute the APK, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/android
