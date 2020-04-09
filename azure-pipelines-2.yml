@@ -7,9 +7,7 @@ trigger:
 - master
 
 pool:
-- task: NuGetToolInstaller@1
-  inputs:
-    versionSpec: '5.5.1'
+
   vmImage: 'macos-latest'
 
 steps:
@@ -39,4 +37,6 @@ steps:
     packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
     nuGetFeedType: 'internal'
     publishVstsFeed: 'db69991f-5e87-42f0-8d50-f4d6dd0e8bfd'
-
+- task: NuGetToolInstaller@1
+  inputs:
+    versionSpec: '5.5.1'
