@@ -1,5 +1,4 @@
 # Android
-
 # Build your Android project with Gradle.
 # Add steps that test, sign, and distribute the APK, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/android
@@ -8,6 +7,9 @@ trigger:
 - master
 
 pool:
+- task: NuGetToolInstaller@1
+  inputs:
+    versionSpec: '5.5.1'
   vmImage: 'macos-latest'
 
 steps:
