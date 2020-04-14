@@ -1,13 +1,4 @@
 # Android
-- task: DownloadPackage@1
-  inputs:
-    packageType: 'upack'
-    feed: 'cf95f01f-ae28-4dd9-a601-05dc2389d9a8/9b7216ab-cdcf-44da-a3a6-56fd673c0790'
-    view: 
-    definition: '6132632d-4d67-4d4a-81be-8007f4594f8a'
-    version: '0.0.1'
-    downloadPath: '$(System.ArtifactsDirectory)'
-
 # Build your Android project with Gradle.
 # Add steps that test, sign, and distribute the APK, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/android
@@ -42,5 +33,14 @@ steps:
     vstsFeedPublish: 'cf95f01f-ae28-4dd9-a601-05dc2389d9a8/9b7216ab-cdcf-44da-a3a6-56fd673c0790'
     vstsFeedPackagePublish: 'hemanth'
     versionOption: 'patch'
+
+- task: DownloadPackage@1
+  inputs:
+    packageType: 'upack'
+    feed: 'cf95f01f-ae28-4dd9-a601-05dc2389d9a8/9b7216ab-cdcf-44da-a3a6-56fd673c0790'
+    view: 
+    definition: '6132632d-4d67-4d4a-81be-8007f4594f8a'
+    version: '0.0.1'
+    downloadPath: '$(System.ArtifactsDirectory)'
 
 
