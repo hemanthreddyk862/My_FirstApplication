@@ -26,9 +26,3 @@ steps:
     targetFolder: '$(build.artifactStagingDirectory)'
 - task: PublishBuildArtifacts@1
 
-
-- task: Npm@1
-  inputs:
-    command: 'publish'
-    publishRegistry: 'useFeed'
-    publishFeed: 'd1ddb60c-c4b8-41c6-b2ef-150ebdd19d1f/7bbbe105-3deb-4353-840f-d2da6277d1f0'
