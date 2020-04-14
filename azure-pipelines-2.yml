@@ -30,8 +30,8 @@ steps:
     command: 'publish'
     publishDirectory: '$(Build.ArtifactStagingDirectory)'
     feedsToUsePublish: 'internal'
-    vstsFeedPublish: 'cf95f01f-ae28-4dd9-a601-05dc2389d9a8/9b7216ab-cdcf-44da-a3a6-56fd673c0790'
-    vstsFeedPackagePublish: 'hemanth'
+    vstsFeedPublish: 'cf95f01f-ae28-4dd9-a601-05dc2389d9a8/c0469580-37c1-4837-8171-1a09d95c13a4'
+    vstsFeedPackagePublish: '1jjjjjjjjjjjjj'
     versionOption: 'patch'
 
 
@@ -41,7 +41,7 @@ steps:
     command: 'download'
     downloadDirectory: '$(System.DefaultWorkingDirectory)'
     feedsToUse: 'internal'
-    vstsFeed: 'cf95f01f-ae28-4dd9-a601-05dc2389d9a8/9b7216ab-cdcf-44da-a3a6-56fd673c0790'
+    vstsFeed: 'cf95f01f-ae28-4dd9-a601-05dc2389d9a8/c0469580-37c1-4837-8171-1a09d95c13a4'
     vstsFeedPackage: '6132632d-4d67-4d4a-81be-8007f4594f8a'
     vstsPackageVersion: '0.0.1'
 
