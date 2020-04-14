@@ -27,11 +27,8 @@ steps:
 - task: PublishBuildArtifacts@1
 
 
-- task: UniversalPackages@0
+- task: Npm@1
   inputs:
     command: 'publish'
-    publishDirectory: '$(Build.ArtifactStagingDirectory)'
-    feedsToUsePublish: 'internal'
-    vstsFeedPublish: 'd1ddb60c-c4b8-41c6-b2ef-150ebdd19d1f/0c0a9b9d-680e-4861-8a17-2f551cfb595f'
-    vstsFeedPackagePublish: 'myfirstpack'
-    versionOption: 'patch'
+    publishRegistry: 'useFeed'
+    publishFeed: 'd1ddb60c-c4b8-41c6-b2ef-150ebdd19d1f/7bbbe105-3deb-4353-840f-d2da6277d1f0'
