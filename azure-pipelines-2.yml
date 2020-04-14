@@ -25,6 +25,16 @@ steps:
     contents: '**/*.apk'
     targetFolder: '$(build.artifactStagingDirectory)'
 
+- task: UniversalPackages@0
+  inputs:
+    command: 'publish'
+    publishDirectory: '$(Build.ArtifactStagingDirectory)'
+    feedsToUsePublish: 'internal'
+    vstsFeedPublish: 'cf95f01f-ae28-4dd9-a601-05dc2389d9a8/9b7216ab-cdcf-44da-a3a6-56fd673c0790'
+    vstsFeedPackagePublish: 'hemanth'
+    versionOption: 'patch'
+
+
 
 - task: UniversalPackages@0
   inputs:
@@ -35,13 +45,5 @@ steps:
     vstsFeedPackage: '6132632d-4d67-4d4a-81be-8007f4594f8a'
     vstsPackageVersion: '0.0.1'
 
-- task: UniversalPackages@0
-  inputs:
-    command: 'publish'
-    publishDirectory: '$(Build.ArtifactStagingDirectory)'
-    feedsToUsePublish: 'internal'
-    vstsFeedPublish: 'cf95f01f-ae28-4dd9-a601-05dc2389d9a8/9b7216ab-cdcf-44da-a3a6-56fd673c0790'
-    vstsFeedPackagePublish: 'hemanth'
-    versionOption: 'patch'
 
 
