@@ -35,7 +35,7 @@ steps:
     vstsFeedPackage: '6132632d-4d67-4d4a-81be-8007f4594f8a'
     vstsPackageVersion: '0.0.1'
 
-task: UniversalPackages@0
+- task: UniversalPackages@0
   inputs:
     command: 'publish'
     publishDirectory: '$(Build.ArtifactStagingDirectory)'
